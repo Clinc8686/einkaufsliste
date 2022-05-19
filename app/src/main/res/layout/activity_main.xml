@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Einkaufsliste"
+        android:text="@string/header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -18,45 +18,17 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"/>
 
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp" />
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"/>
+    <AutoCompleteTextView style="@style/shoppingList" android:id="@+id/shopping1"/>
+    <AutoCompleteTextView style="@style/shoppingList" android:id="@+id/shopping2"/>
+    <AutoCompleteTextView style="@style/shoppingList" android:id="@+id/shopping3"/>
+    <AutoCompleteTextView style="@style/shoppingList" android:id="@+id/shopping4"/>
+    <AutoCompleteTextView style="@style/shoppingList" android:id="@+id/shopping5"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:onClick="printToast"
+        android:text="fertig"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
