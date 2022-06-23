@@ -56,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
         String loc = ((EditText) findViewById(R.id.mLocationEditText)).getText().toString();
         Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
         Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
+        Intent intentChooser = Intent.createChooser(intent, "Choose application");;
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
+        if (intentChooser.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
             Log.d("ImplicitIntents", "Can't handle this intent!");
