@@ -31,4 +31,20 @@
         android:layout_marginTop="20dp"
         android:onClick="printToast"
         android:text="fertig"/>
+
+
+    <!-- Add an EditText and a Button to the shopping list Activity to locate a particular store on a map. -->
+    <EditText
+        android:layout_margin="20dp"
+        android:id="@+id/mLocationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search particular store"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show Store"
+        android:layout_gravity="center"
+        android:onClick="showStoreOnMap"/>
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -2,11 +2,15 @@ package de.clinc8686.einkaufsliste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -43,5 +47,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         Toast.makeText(MainActivity.this, string.deleteCharAt(string.length()-2), Toast.LENGTH_LONG).show();
+    }
+
+    // Add an EditText and a Button to the shopping list Activity to locate a particular store on a map.
+    public void showStoreOnMap(View view) {
+        String loc = ((EditText) findViewById(R.id.mLocationEditText)).getText().toString();
+        Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
+        Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!");
+        }
     }
 }

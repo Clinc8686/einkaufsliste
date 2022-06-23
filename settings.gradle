@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "einkaufsliste"
 include ':app'
+include ':switchlistenertest'
