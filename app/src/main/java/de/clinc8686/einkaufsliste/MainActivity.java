@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 string.append(actv.getText()).append(", ");
             }
         }
-        Toast.makeText(MainActivity.this, string.deleteCharAt(string.length()-2), Toast.LENGTH_LONG).show();
+
+        if(string.length() > 0)
+            Toast.makeText(MainActivity.this, string.deleteCharAt(string.length()-2), Toast.LENGTH_LONG).show();
     }
 
     // Add an EditText and a Button to the shopping list Activity to locate a particular store on a map.
